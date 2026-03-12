@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totes by Panda</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logoooooo.jpg">
+</head>
+
+<body id="top">
+
+  <!-- ==== NAVIGATION ==== -->
+  <nav class="nav">
+    <div class="logo">
+      <a href="Home.html" class="bab">Totes by Panda</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="Home.html" class="bab">Home</a></li>
+      <li><a href="bags.html" class="bab">Bags</a></li>
+      <li><a href="About.html" class="bab">About</a></li>
+      <li><a href="Shop.html" class="bab">Shop</a></li>
+      <li><a href="Offers.html" class="bab">Offers</a></li>
+      <li><a href="Totes.html" class="bab">Totes</a></li>
+      <li><a href="Contact.html" class="bab">Contact</a></li>
+    </ul>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+
+<style>
+body {
+  font-family: sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 20px;
+}
+
+.card {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+h1 {
+  text-align: center;
+  font-variant: small-caps;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #e91e63;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #c2185b;
+  transition: 0.3s;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 class="sis">Contact Us</h1>
+
+<div class="card">
+<p>We value your feedback. Fill in and send.</p>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<label for="name">Full name</label>
+<input id="name" required minlength="2">
+
+<label for="email">Email</label>
+<input id="email" type="email" required>
+
+<label for="type">Type</label>
+<select id="type">
+<option value="review">Review</option>
+<option value="complaint">Complaint</option>
+</select>
+
+<label for="rating">Rating (optional)</label>
+<select id="rating">
+<option value="">—</option>
+<option value="5">5 – Excellent</option>
+<option value="4">4 – Good</option>
+<option value="3">3 – Okay</option>
+<option value="2">2 – Poor</option>
+<option value="1">1 – Terrible</option>
+</select>
+
+<label for="message">Message</label>
+<textarea id="message" rows="6" required minlength="10"></textarea>
+
+<div class="honeypot">
+<label>Leave this empty</label>
+<input type="text">
+</div>
+
+<button type="submit">Send Message</button>
+
+</form>
+</div>
+
+<!-- ==== FOOTER ==== -->
+  <footer class="footer power">
+    <h1 class="end">Thank you for visiting our page</h1>
+    <p class="end1">
+      Thank you for choosing Totes by Panda &hearts;<br>
+      We’re so happy you’re loving your bag! Each tote is made with care so you can carry in style.
+    </p>
+    <a href="#top"><img src="images/logoooooo.jpg" alt="back to top" height="90" class="not"></a>
+    <h3 class="done">2025, @Totes by Panda official</h3>
+    <p class="designer">Designed by Bildad Mwita</p>
+  </footer>
+
+  <!-- ==== HAMBURGER MENU SCRIPT ==== -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
+
+<script>
+function sendToWhatsApp(){
+
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var type = document.getElementById("type").value;
+var rating = document.getElementById("rating").value;
+var message = document.getElementById("message").value;
+
+var phone = "254791598391";
+
+var url = "https://wa.me/" + phone + "?text="
++ "*New Message - Totes by Panda*%0a"
++ "Name: " + name + "%0a"
++ "Email: " + email + "%0a"
++ "Type: " + type + "%0a"
++ "Rating: " + rating + "%0a"
++ "Message: " + message;
+
+window.open(url,'_blank');
+}
+</script>
+
+</body>
+</html>
